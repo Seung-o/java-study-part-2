@@ -2,30 +2,29 @@ package chapter4;
 
 public class MyArray {
 
+    public static final int ERROR_CODE = -9999;
+    public int ARRAY_CAPACITY;
     int[] intArr;
     int count;
 
-    public int ARRAY_CAPACITY;
-    public static final int ERROR_CODE = -9999;
-
-    public MyArray(){
+    public MyArray() {
         count = 0;
         ARRAY_CAPACITY = 10;
         intArr = new int[ARRAY_CAPACITY];
     }
 
-    public MyArray(int size){
+    public MyArray(int size) {
         count = 0;
         ARRAY_CAPACITY = size;
         intArr = new int[ARRAY_CAPACITY];
     }
 
-    public int getSize(){
+    public int getSize() {
         return this.count;
     }
 
     public void addElement(int num) {
-        if(count >= ARRAY_CAPACITY) {
+        if (count >= ARRAY_CAPACITY) {
             System.out.println("Not enough memory");
             return;
         }
@@ -34,18 +33,18 @@ public class MyArray {
     }
 
     public void insertElement(int position, int num) {
-        if(count >= ARRAY_CAPACITY) {
+        if (count >= ARRAY_CAPACITY) {
             System.out.println("Not enough memory");
             return;
         }
 
-        if(position < 0|| position > count) {
+        if (position < 0 || position > count) {
             System.out.println("Insert Error");
             return;
         }
 
-        for(int i = count-1; i>=position; i--) {
-            intArr[i+1] = intArr[i];
+        for (int i = count - 1; i >= position; i--) {
+            intArr[i + 1] = intArr[i];
         }
 
         intArr[position] = num;
@@ -53,20 +52,20 @@ public class MyArray {
     }
 
     public int removeElement(int position) {
-        if(isEmpty()) {
+        if (isEmpty()) {
             System.out.println("There is no element");
             return ERROR_CODE;
         }
 
-        if(position < 0|| position > count) {
+        if (position < 0 || position > count) {
             System.out.println("Insert Error");
             return ERROR_CODE;
         }
 
         int result = intArr[position];
 
-        for(int i = position; i < count; i++){
-            intArr[i] = intArr[i+1];
+        for (int i = position; i < count; i++) {
+            intArr[i] = intArr[i + 1];
         }
 
         count--;
@@ -79,11 +78,11 @@ public class MyArray {
 
     public void printAll() {
 
-        if(count==0) {
+        if (count == 0) {
             System.out.println("빈 배열입니다.");
         }
 
-        for(int i=0; i<count;i++) {
+        for (int i = 0; i < count; i++) {
             System.out.println(intArr[i]);
         }
     }

@@ -12,12 +12,12 @@ public class ClassTest {
         System.out.println(c.getName());
 
         Constructor[] cons = c.getConstructors();
-        for(Constructor con : cons) {
+        for (Constructor con : cons) {
             System.out.println(con);
         }
 
         Method[] methods = c.getMethods();
-        for(Method method : methods) {
+        for (Method method : methods) {
             System.out.println(method);
         }
 
@@ -25,7 +25,7 @@ public class ClassTest {
         Class[] parameterTypes = {String.class, String.class};
         Constructor bookCons = book.getConstructor(parameterTypes);
         Object[] initArgs = {"태백산맥", "조정래"};
-        Book book1 = (Book)bookCons.newInstance(initArgs);
+        Book book1 = (Book) bookCons.newInstance(initArgs);
         System.out.println(book1);
     }
 }

@@ -7,7 +7,7 @@ public class MyArrayTest {
         arr.addElement(10);
         arr.addElement(20);
         arr.addElement(30);
-        arr.insertElement(1,50);
+        arr.insertElement(1, 50);
         arr.printAll();
 
         System.out.println("======================");

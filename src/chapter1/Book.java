@@ -1,8 +1,8 @@
 package chapter1;
 
 public class Book implements Cloneable { // 객체 지향 프로그래밍에서는 정보 은닉 관점에서 clone 사용을 유의해야 함.
-    private String title;
-    private String author;
+    private final String title;
+    private final String author;
 
     public Book(String title, String author) {
         this.title = title;
@@ -17,8 +17,7 @@ public class Book implements Cloneable { // 객체 지향 프로그래밍에서�
     @Override
     public boolean equals(Object obj) { // 기존 Object class에서의 equals는 인스턴스의 힙메모리 상의 주소값을 비교함
 
-        if (obj instanceof Book) {
-            Book book = (Book) obj;
+        if (obj instanceof Book book) {
             return book.title == this.title && book.author == this.author;
         }
 
