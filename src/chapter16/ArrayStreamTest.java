@@ -11,5 +11,8 @@ public class ArrayStreamTest {
 
         long count = Arrays.stream(arr).count();
         System.out.println(count);
+
+        int sumByReduce = Arrays.stream(arr).reduce(0, (a, b) -> a + b);
+        System.out.println(sumByReduce);
     }
 }
