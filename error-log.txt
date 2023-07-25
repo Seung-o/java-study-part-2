@@ -1,0 +1,4 @@
+7월 26, 2023 8:43:52 오전 chapter20.MyLogger log
+SEVERE: test
+7월 26, 2023 8:49:59 오전 chapter20.MyLogger log
+SEVERE: test

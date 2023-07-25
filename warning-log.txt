@@ -1,0 +1,12 @@
+7월 26, 2023 8:43:52 오전 chapter20.MyLogger log
+WARNING: test
+7월 26, 2023 8:43:52 오전 chapter20.MyLogger log
+SEVERE: test
+7월 26, 2023 8:47:18 오전 chapter20.MyLogger warning
+WARNING: Student Name cannot be null
+7월 26, 2023 8:47:18 오전 chapter20.MyLogger warning
+WARNING: Student Name is too long
+7월 26, 2023 8:49:59 오전 chapter20.MyLogger log
+WARNING: test
+7월 26, 2023 8:49:59 오전 chapter20.MyLogger log
+SEVERE: test
