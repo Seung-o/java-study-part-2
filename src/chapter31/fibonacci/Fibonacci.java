@@ -17,6 +17,10 @@ public class Fibonacci {
 
         int resultByIter = fib.fibonacciIter(10);
         System.out.println("Result by iter: " + resultByIter);
+
+
+        int resultByMem = fib.fibonacciMem(10);
+        System.out.println("Result by mem: " + resultByMem);
     }
 
     public int fibonacciRecur(int n) {
@@ -42,5 +46,25 @@ public class Fibonacci {
         }
 
         return current;
+    }
+
+    public int fibonacciMem(int n) {
+        values[0] = 0;
+        values[1] = 1;
+
+        int result = 0;
+
+        if (n == 0) return values[0];
+        if (n == 1) return values[1];
+
+        for (int i = 2; i <= n; i++) {
+            result = values[i - 1] + values[i - 2];
+
+            if (values[i] == 0) {
+                values[i] = result;
+            }
+        }
+
+        return result;
     }
 }
